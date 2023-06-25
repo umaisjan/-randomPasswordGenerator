@@ -46,7 +46,6 @@ def validate_password(pwd: list[chr]) -> bool:
 if __name__ == '__main__':
     password = generate_random_characters(characters=ALL_CHARACTERS, length=PASSWORD_LENGTH)
     while not validate_password(password):
-        print("I got an invalid password: " + "".join(password))
         password = generate_random_characters(characters=ALL_CHARACTERS, length=PASSWORD_LENGTH)
 
     print(''.join(password))
